@@ -44,7 +44,7 @@ $(document).ready(function () {
     var i = 0;
     console.log("question" + i);
 
-    $("#poseContainer").append(questions[i].poseImage);
+    $("#poseContainer").html(questions[i].poseImage);
     $("#questionContainer").html(questions[i].question);
     $("#1stChoice").append(questions[i].choices[0]);
     $("#2ndChoice").append(questions[i].choices[1]);
@@ -101,6 +101,7 @@ $(document).ready(function () {
         $("#next").hide();
         i = i + 1;
         console.log("question" + i);
+        $("#poseContainer").html(questions[i].poseImage);
         $("#questionContainer").html(questions[i].question);
         $("#1stChoice").html(questions[i].choices[0]);
         $("#2ndChoice").html(questions[i].choices[1]);
@@ -118,6 +119,7 @@ $(document).ready(function () {
         $(this).hide();
         $("#next").hide();
         i = 0;
+        $("#poseContainer").html(questions[i].poseImage);
         $("#questionContainer").html(questions[i].question);
         $("#1stChoice").html(questions[i].choices[0]);
         $("#2ndChoice").html(questions[i].choices[1]);
