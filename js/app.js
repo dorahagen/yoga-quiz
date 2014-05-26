@@ -4,36 +4,36 @@ $(document).ready(function () {
 
     var questions = [{
         question: "Pose 1 of 5",
-		poseImage: "images/child.png",
-		choices: ["Downward Dog (Mukhasana)", "Child (Garbhasana)", "Bow (Duanurasana)", "Mountain (Tadasana)"],
+        poseImage: "images/child.png",
+        choices: ["Downward Dog (Mukhasana)", "Child (Garbhasana)", "Bow (Duanurasana)", "Mountain (Tadasana)"],
         questionValue: 0,
         correct: 1,
         answerText: "Child (Garbhasana) – \"The Universe protects and nurtures me. I am secure and loved.\""
     }, {
         question: "Pose 2 of 5",
-		poseImage: "images/bow.png",
-		choices: ["Bow (Dhanurasana)", "Boat", "Spider (Supta Padangusthasana)", "Bridge (Setu Bandhasana)"],
+        poseImage: "images/bow.png",
+        choices: ["Bow (Dhanurasana)", "Boat", "Spider (Supta Padangusthasana)", "Bridge (Setu Bandhasana)"],
         questionValue: 1,
         correct: 0,
         answerText: "Bow (Dhanurasana) – \"I am the essence of strength and confidence.\""
     }, {
         question: "Pose 3 of 5",
-		poseImage: "images/down-dog.png",
-		choices: ["Triangle (Trikonasana)", "Half Moon (Ardha Chandrasana)", "Downward Dog (Mukhasana)", "Mountain (Tadasana)"],
+        poseImage: "images/down-dog.png",
+        choices: ["Triangle (Trikonasana)", "Half Moon (Ardha Chandrasana)", "Downward Dog (Mukhasana)", "Mountain (Tadasana)"],
         questionValue: 2,
         correct: 2,
         answerText: "Downward Dog (Mukhasana) – \"I enjoy freedom of movement, flexibility of thought.\""
     }, {
         question: "Pose 4 of 5",
-		poseImage: "images/fish.png",
-		choices: ["Full Shoulderstand (Sarvangasana)", "Bridge (Setu Bandhasana)", "Cobra (Bhujangasana)", "Fish (Matsyasana)"],
+        poseImage: "images/fish.png",
+        choices: ["Full Shoulderstand (Sarvangasana)", "Bridge (Setu Bandhasana)", "Cobra (Bhujangasana)", "Fish (Matsyasana)"],
         questionValue: 3,
         correct: 3,
         answerText: "Fish (Matsyasana) – \"I inhale Life's positive energy and exhale negativity.\""
     }, {
         question: "Pose 5 of 5",
-		poseImage: "images/chair.png",
-		choices: ["Mountain (Tadasana)", "Chair (Utkatasana)", "Tree (Vrikshasana)", "Thunderbolt (Vajrasana)"],
+        poseImage: "images/chair.png",
+        choices: ["Mountain (Tadasana)", "Chair (Utkatasana)", "Tree (Vrikshasana)", "Thunderbolt (Vajrasana)"],
         questionValue: 4,
         correct: 1,
         answerText: "Chair (Utkatasana) – \"I allow Life's energy to stream through me.\""
@@ -44,6 +44,7 @@ $(document).ready(function () {
     var i = 0;
     console.log("question" + i);
 
+    $("#poseContainer").append(questions[i].poseImage);
     $("#questionContainer").html(questions[i].question);
     $("#1stChoice").append(questions[i].choices[0]);
     $("#2ndChoice").append(questions[i].choices[1]);

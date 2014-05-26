@@ -40,6 +40,10 @@ h1 {
 	padding: 60px 60px 110px 60px;
 }
 
+#poseContainer {
+	float: left;
+}
+
 #questionContainer {
 	font-family: Raleway, sans-serif;
 	font-weight: 200;
