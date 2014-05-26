@@ -44,7 +44,7 @@ $(document).ready(function () {
     var i = 0;
     console.log("question" + i);
 
-    $("#poseContainer").html(questions[i].poseImage);
+    /* $("#poseContainer").html(questions[i].poseImage); */
     $("#questionContainer").html(questions[i].question);
     $("#1stChoice").append(questions[i].choices[0]);
     $("#2ndChoice").append(questions[i].choices[1]);
