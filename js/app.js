@@ -53,7 +53,7 @@ $(document).ready(function () {
    
 // Submit Answer Button
 
-    $('body').on('click', 'input:submit', function () {
+    $('body').on('click', '#submit', function () {
         var userAnswer = $("input[type='radio']:checked").val();
         
         if (userAnswer === undefined) {
@@ -68,13 +68,13 @@ $(document).ready(function () {
             userAnswers += 1;
             console.log(userAnswers);
             $("#answerContainer").html(questions[i].answerText);
-            $("input:submit").hide();
+            $("#submit").hide();
             $("#next").show();
             $("#answersCorrect").show();
             $("#answersCorrect").html("Questions answered correctly: " + userAnswers +" of 5");
                 if (i === 4) {
                 console.log("complete");
-                $("input:submit").hide();
+                $("#submit").hide();
                 $("#restart").show();
                 $("#next").hide();
                }
@@ -83,11 +83,11 @@ $(document).ready(function () {
             console.log("incorrect");
             $("#result").html("Incorrect.");
             $("#answerContainer").html(questions[i].answerText);
-            $("input:submit").hide();
+            $("#submit").hide();
             $("#next").show();
                 if (i === 4) {
                 console.log("complete");
-                $("input:submit").hide();
+                $("#submit").hide();
                 $("#restart").show();
                 $("#next").hide();
                 }
@@ -97,7 +97,7 @@ $(document).ready(function () {
 // Next Question Button
 
     $('body').on('click', '#next', function () {
-        $('input:submit').show();
+        $('#submit').show();
         $("#next").hide();
         i = i + 1;
         console.log("question" + i);
@@ -130,7 +130,7 @@ $(document).ready(function () {
         $("#answerContainer").html("");
         $("#result").html("");
         $("input:radio").prop('checked', false);
-        $('input:submit').show();
+        $('#submit').show();
         $("#answersCorrect").html("");
     });
 
