@@ -4,35 +4,35 @@ $(document).ready(function () {
 
     var questions = [{
         question: "Pose 1 of 5",
-        poseImage: "images/child.png",
+        poseImage: '<img src="images/child.png" alt="Pose 1" id="poseImage">',
         choices: ["Downward Dog (Mukhasana)", "Child (Garbhasana)", "Bow (Duanurasana)", "Mountain (Tadasana)"],
         questionValue: 0,
         correct: 1,
         answerText: "Child (Garbhasana) – \"The Universe protects and nurtures me. I am secure and loved.\""
     }, {
         question: "Pose 2 of 5",
-        poseImage: "images/bow.png",
+        poseImage: '<img src="images/bow.png" alt="Pose 2" id="poseImage">',
         choices: ["Bow (Dhanurasana)", "Boat", "Spider (Supta Padangusthasana)", "Bridge (Setu Bandhasana)"],
         questionValue: 1,
         correct: 0,
         answerText: "Bow (Dhanurasana) – \"I am the essence of strength and confidence.\""
     }, {
         question: "Pose 3 of 5",
-        poseImage: "images/down-dog.png",
+        poseImage: '<img src="images/down-dog.png" alt="Pose 3" id="poseImage">',
         choices: ["Triangle (Trikonasana)", "Half Moon (Ardha Chandrasana)", "Downward Dog (Mukhasana)", "Mountain (Tadasana)"],
         questionValue: 2,
         correct: 2,
         answerText: "Downward Dog (Mukhasana) – \"I enjoy freedom of movement, flexibility of thought.\""
     }, {
         question: "Pose 4 of 5",
-        poseImage: "images/fish.png",
+        poseImage: '<img src="images/fish.png" alt="Pose 4" id="poseImage">',
         choices: ["Full Shoulderstand (Sarvangasana)", "Bridge (Setu Bandhasana)", "Cobra (Bhujangasana)", "Fish (Matsyasana)"],
         questionValue: 3,
         correct: 3,
         answerText: "Fish (Matsyasana) – \"I inhale Life's positive energy and exhale negativity.\""
     }, {
         question: "Pose 5 of 5",
-        poseImage: "images/chair.png",
+        poseImage: '<img src="images/chair.png" alt="Pose 5" id="poseImage">',
         choices: ["Mountain (Tadasana)", "Chair (Utkatasana)", "Tree (Vrikshasana)", "Thunderbolt (Vajrasana)"],
         questionValue: 4,
         correct: 1,
@@ -119,6 +119,8 @@ $(document).ready(function () {
         $(this).hide();
         $("#next").hide();
         i = 0;
+        userAnswers = 0;
+        userAnswer = "";
         $("#poseContainer").html(questions[i].poseImage);
         $("#questionContainer").html(questions[i].question);
         $("#1stChoice").html(questions[i].choices[0]);
