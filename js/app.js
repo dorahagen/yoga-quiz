@@ -57,14 +57,14 @@ $(document).ready(function () {
         var userAnswer = $("input[type='radio']:checked").val();
         
         if (userAnswer === undefined) {
-            $("#result").html("Please select an option.");
+            $("#answerContainer").html("Please select an option.");
          }
 
         else if (userAnswer == questions[i].correct) {
             console.log(userAnswer);
             console.log(questions[i].correct);
             console.log("CORRECT");
-            $("#result").html("Correct! ");
+            $("#result").html("Correct!");
             userAnswers += 1;
             console.log(userAnswers);
             $("#answerContainer").html(questions[i].answerText);
